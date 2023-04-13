@@ -151,6 +151,11 @@ function validateCard(){
 	
 	let sum = 0;
 	for(let i=0; i<15; ++i){
+		if(isNaN(cardText[i])){
+			alert("Cartão inválido!");
+			return;
+		}
+		
 		if(i%2==0){
 			cardText[i] *= 2;
 			if(cardText[i]>9){
