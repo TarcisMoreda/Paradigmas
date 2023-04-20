@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://colorjs.io/dist/color.global.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="img-wrapper">
+		<img src="image.jpg" id="img-simple"/>
+		<canvas id="img-canvas"></canvas>
+	</div>
+	<div class="btn-wrapper">
+		<div class="range-wrapper">
+			<label for="const-range">Dist máxima: 0</label>
+			<input type="range" name="const-range" id="const-range"/>
+			<label for="const-range">1000</label>
+		</div>
+		<div class="color-pickers">
+			<div class="const-color-wrapper">
+				<label for="const-color">Cor do fundo:</label>
+				<input type="color" name="const-color" id="const-color"/>	
+			</div>
+			<div class="new-color-wrapper">
+				<label for="new-color">Cor da substituição:</label>
+				<input type="color" name="new-color" id="new-color"/>	
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+</html>

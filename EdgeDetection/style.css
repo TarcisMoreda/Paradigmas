@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-wrapper{
+	display: flex;
+}
+
+#img-simple{
+	width: 700px;
+	margin-right: 10px;
+}
+
+#img-canvas{
+	width: 700px;
+}
+
+.btn-wrapper{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+.color-pickers{
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+	justify-content: center;
+}
+
+.range-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#const-range{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.const-color-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#const-color{
+	margin-left: 5px;
+}
+
+.new-color-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#new-color{
+	margin-left: 5px;
+}
+
+@media screen and (max-width: 1500px){
+	.img-wrapper{
+		flex-direction: column;
+	}
+	
+	#img-simple{
+		margin-right: 0;
+		margin-bottom: 10px;
+	}	
+}
