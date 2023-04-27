@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+#img-wrapper{
+	display: flex;
+}
+
+#img-simple{
+	width: 700px;
+	height: auto;
+	margin-right: 10px;
+}
+
+#img-canvas{
+	width: 700px;
+}
+
+.btn-wrapper{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+.espelhar-wrapper{
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 1500px){
+	.img-wrapper{
+		flex-direction: column;
+	}
+	
+	#img-simple{
+		margin-right: 0;
+		margin-bottom: 10px;
+	}	
+}
