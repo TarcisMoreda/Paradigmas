@@ -1,12 +1,58 @@
 *{
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body{
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: antiquewhite;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+}
+
+#card-game{
+	width: 720px;
+	height: 600px;
+	background-color: antiquewhite;
+	border: 2px solid rebeccapurple;
+	display: grid;
+	grid-template-rows: 80px auto;
+	grid-template-areas:
+		"player aces"
+		"stacks stacks";
+}
+#player{
+	grid-area: player;
+	margin-left: 5px;
+}
+#aces{
+	grid-area: aces;
+	display: flex;
+	justify-content: end;
+	margin-right: 5px;
+}
+#player .card,
+#aces .card{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+#stacks{
+	grid-area: stacks;
+	display: flex;
+	justify-content: space-between;
+}
+#stacks .stack{
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#stacks .card ~ .card{
+	margin-bottom: 0;
+	margin-top: -32px;
+}
+
+.ace{
+	opacity: 50%;
 }

@@ -1,11 +1,3 @@
-import { Deck } from "./src/entities/deck";
+import Game from "./src/game";
 
-let hand = []
-let deck = new Deck();
-deck.shuffle();
-for(let i=0; i<3; ++i)
-    hand.push(deck.draw());
-hand.pop();
-
-deck.reset([hand]);
-console.log(deck);
+let game = new Game();

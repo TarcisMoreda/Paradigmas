@@ -2,7 +2,7 @@ import { SUITS } from "../consts";
 import { shuffle_array } from "../utils";
 import Card from "./card";
 
-export class Deck{
+export default class Deck{
 	#cards = [];
 
 	/**
@@ -27,16 +27,34 @@ export class Deck{
 	 * @return {null} 
 	 */
 	reset(hands){
+		if(hands.length===0)
+			return;
+		hands.forEach(el=>{
+			if(el.length===0)
+				return;
+		});
+
 		let deck = this.#create();
 
 		for(let i=0; i<hands.length; ++i)
-			for(let card of hands[i]){
+			hands[i].forEach(card=>{
 				let index = deck.findIndex((el)=>el.label===card.label && el.value===card.value);
 				deck.splice(index, 1);
-			}
+			})	
 
 		this.#cards = deck;
 		this.shuffle();
+	}
+
+	top(){
+		return this.#cards[this.#cards.length-1];
+	}
+
+	insert(card){
+		if(typeof card!=='object')
+			return;
+
+		this.#cards.unshift(card);
 	}
 
 	#create(){
@@ -44,8 +62,8 @@ export class Deck{
 
 		for(let suit of SUITS)
 			for(let i=0; i<13; ++i)
-				deck.push(new Card(i, suit));
+				deck.push(new Card(i+1, suit));
 
 		return deck;
 	}
-};
+}
