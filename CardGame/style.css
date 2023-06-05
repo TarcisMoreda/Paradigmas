@@ -11,6 +11,11 @@ body{
 	background-color: black;
 }
 
+.spacing{
+	width: 64px;
+	height: 64px;
+}
+
 #card-game{
 	width: 720px;
 	height: 600px;
@@ -19,21 +24,17 @@ body{
 	display: grid;
 	grid-template-rows: 80px auto;
 	grid-template-areas:
-		"player aces"
+		"game game"
 		"stacks stacks";
 }
-#player{
-	grid-area: player;
+#game{
+	grid-area: game;
 	margin-left: 5px;
-}
-#aces{
-	grid-area: aces;
-	display: flex;
-	justify-content: end;
 	margin-right: 5px;
+	display: flex;
+	justify-content: space-between;
 }
-#player .card,
-#aces .card{
+#game .card{
 	margin-top: 8px;
 	margin-bottom: 8px;
 }

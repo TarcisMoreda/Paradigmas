@@ -24,10 +24,14 @@ export default class Stack{
 	}
 
 	get(index){
+		if(index>this.#cards.length)
+			return null;
+
 		return this.#cards[index];
 	}
 	get_card(index){
-		this.#cards[this.#cards.length-1].visible = true;
+		if(this.#cards.length>=1)
+			this.#cards[this.#cards.length-1].visible = true;
 		return this.#cards[index];
 	}
 	get_cards(index){
@@ -38,7 +42,6 @@ export default class Stack{
 			this.#visible--;
 		
 		this.#cards[index-1].visible = true;
-		console.log(index, this.#cards.length-index);
 		return this.#cards.splice(index, this.#cards.length-index);
 	}
 
