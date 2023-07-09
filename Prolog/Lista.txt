@@ -1,0 +1,13 @@
+% Problema 1
+selecionar(0, _L, []).
+selecionar(N, [H|T], [H|R]) :- N1 is N-1, selecionar(N1, T, R).
+
+% Problema 2
+eliminar([_H], []).
+eliminar([H|T], [H|R]) :- eliminar(T, R).
+
+% Problema 3
+concatenar(L1, L2, R) :- append(L1, L2, R).
+
+% Problema 4
+inverter(L, R) :- reverse(L, R).
